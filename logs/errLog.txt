@@ -1,0 +1,13 @@
+20240408	17:40:53	5d419144-2235-4d2a-a777-50228e87a746	Error: Not allowed by CORS
+20240502	07:57:12	957df014-b74b-4836-ac74-5b272fc3a9c7	TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+20240502	07:57:38	10148530-94b8-4696-8f73-3d7409c9ef5c	TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+20240502	08:05:52	4f5abb7b-3163-4c5a-86b4-386b602f6a83	TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+20240502	08:18:03	985a7b9e-a4c5-46e8-b1ea-9b069085bf85	TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+20240502	08:24:32	9ce481c4-53f7-4528-8789-d612d2e80d8f	TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+20240502	08:25:02	f8c05be9-a848-4ffe-a77c-0c249978e65b	TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+20240502	08:30:28	fb1d926f-f868-4348-97b4-5a19d8a88a35	TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+20240502	08:32:27	840a5a3f-f921-43c2-a88f-f2e23117fd01	TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+20240502	08:32:39	259775ec-8371-4ed2-b86c-2ba869a5742d	TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+20240502	13:46:26	86b8051f-ac1d-4cd3-bb85-5ba898123e56	SyntaxError: Unexpected end of JSON input
+20240502	15:42:12	71134614-1f9f-43d0-a0dc-e272fc13b153	SyntaxError: Unexpected end of JSON input
+20240502	15:53:05	da3423eb-d09e-4d9e-b152-a2f7f838fdf2	SyntaxError: Unexpected end of JSON input
