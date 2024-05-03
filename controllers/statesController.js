@@ -129,10 +129,7 @@ const createFunFact = async (req, res) => {
           funfacts: req.body.funfacts,
         });
 
-        return res.status(201).json({
-          message: "New state record created with fun facts",
-          state: newState,
-        });
+        return res.status(201).json(newState);
       }
     } catch (error) {
       console.error("Error creating fun facts:", error);
@@ -159,7 +156,13 @@ const patchFunFact = async (req, res) => {
     // res.json(result);
     try {
       // Verify if "funfact" and "index" properties exist in the request body
-      if (!req.body || !req.body.funfact || !req.body.index) {
+      if (!req.body || !req.body.index) {
+        return res
+          .status(400)
+          .json({ message: "State fun fact index value required" });
+      }
+
+      if (!req.body.funfact) {
         return res
           .status(400)
           .json({ message: "State fun fact value required" });
@@ -185,7 +188,7 @@ const patchFunFact = async (req, res) => {
       // Check if the state exists and has fun facts
       if (!state || !state.funfacts || state.funfacts.length === 0) {
         return res.status(404).json({
-          message: `No Fun Fact found at that index for ${stateName.state}`,
+          message: `No Fun Facts found for ${stateName.state}`,
         });
       }
 
@@ -253,7 +256,7 @@ const deleteFunFact = async (req, res) => {
       // Check if the state exists and has fun facts
       if (!state || !state.funfacts || state.funfacts.length === 0) {
         return res.status(404).json({
-          message: `No Fun Fact found at that index for ${stateName.state}`,
+          message: `No Fun Facts found for ${stateName.state}`,
         });
       }
 
@@ -335,7 +338,7 @@ const getNickname = async (req, res) => {
 const getPopulation = async (req, res) => {
   verifyStates(req, res, async () => {
     const state = data.states.find((sta) => sta.code === req.params.stateCode);
-    const population = state.population;
+    const population = state.population.toLocaleString();
     res.json({ state: state.state, population: population });
   });
 };
